@@ -7,6 +7,9 @@ import { LikeButton } from "./LikeButton";
 let story: Meta<typeof LikeButton> = {
   title: "Example/LikeButton",
   component: LikeButton,
+  parameters: {
+    layout: "centered",
+  },
   decorators: [
     (Story) => {
       const [args, updateArgs] = useArgs();
@@ -41,14 +44,14 @@ export default story;
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: StoryFn<typeof LikeButton> = (args) => <LikeButton {...args} />;
 
-export const Liked = Template.bind({});
+export const Liked: any = Template.bind({});
 Liked.args = {
   action: "/post/1",
   label: "Fake Post",
   liked: true,
 };
 
-export const NotLiked = Template.bind({});
+export const NotLiked: any = Template.bind({});
 NotLiked.args = {
   action: "/post/1",
   label: "Fake Post",

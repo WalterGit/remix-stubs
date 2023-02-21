@@ -1,9 +1,9 @@
 import type { Meta, StoryFn } from "@storybook/react";
-import { Header } from "./Header";
+import { Header2 } from "./Header2";
 
-let story: Meta<typeof Header> = {
-  title: "Example/Header",
-  component: Header,
+let story: Meta<typeof Header2> = {
+  title: "Example/Header2",
+  component: Header2,
   parameters: {
     // More on Story layout: https://storybook.js.org/docs/react/configure/story-layout
     layout: "fullscreen",
@@ -12,7 +12,7 @@ let story: Meta<typeof Header> = {
 
 export default story;
 
-const Template: StoryFn<typeof Header> = (args) => <Header {...args} />;
+const Template: StoryFn<typeof Header2> = (args) => <Header2 {...args} />;
 
 export const LoggedIn: any = Template.bind({});
 LoggedIn.args = {
